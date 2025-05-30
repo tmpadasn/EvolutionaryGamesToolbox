@@ -6,7 +6,7 @@ A MATLAB toolbox for simulating and analyzing evolutionary dynamics in the Itera
 	1. Download or clone the repository:
 		Download and unzip the repository
 	2. Set the path in MATLAB:
-		Use the respective command in matlab to set the path to the code folder\
+		Use the respective command in matlab to set the path to the code\ folder
 2. Quick Start
 After installing and setting the path, you can immediately run the example scripts provided:
 	1. After installing and setting the path, you can immediately run the example scripts provided:
