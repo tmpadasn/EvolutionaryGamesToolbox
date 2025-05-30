@@ -47,23 +47,31 @@ Each player is assigned a strategy, and every pair plays a match. The players wi
 
 3. TourTheImi
 Purpose:
-Simulates imitation dynamics using a transition matrix approach, focusing on the state evolution of strategy populations, and emphasizing transitions between best and worst strategies.
+Constructs the state transition matrix for Markov imitation dynamics, where at each step a single player can switch strategies by imitating a higher-payoff strategy. This function describes the entire state space evolution as a Markov chain.
 
 Usage:
 	P = TourTheImi(B, Strategies, POP0, K, T, J)
 Where
-	B: Payoff matrix.
-	Strategies: Cell array of strategy function handles.
-	POP0: Initial population vector for each strategy.
-	K: Number of individuals that change strategies per generation.
-	T: Number of rounds per match.
-	J: Number of generations.
+	B: Payoff matrix for the Prisoner’s Dilemma.
+    Strategies: Cell array of strategy function handles.
+    POP0: Initial population vector (1 x M, where M is the number of strategies).
+    K: Number of individuals to switch strategies per generation. (Kept for compatibility.)
+    T: Number of rounds per match.
+    J: Number of generations to simulate. (Kept for compatibility.)
 Output
-	P: The population matrix over generations (or, in other versions, a transition probability matrix).
+	P: Transition probability matrix (L x L), where L is the total number of possible states (distributions of the population across strategies).
 
 Description:
-For each generation, scores for all strategies are calculated based on their expected payoff against the current population.
-A proportion of individuals from the two worst-performing strategies are selected to switch to one of the best-performing strategies. The new population distribution is updated accordingly.
+Precompute Payoffs:
+    Computes the average payoff for each strategy against every other strategy.
+    Enumerate States:
+        All possible ways N players can be distributed among M strategies are enumerated. Each state represents one such distribution.
+    Build Transition Matrix:
+        For every state, considers all possible single-player "imitation events" (i.e., a player switches from their current strategy to another by imitating the strategy with the highest potential payoff in the current population).
+    Uniform Ties:
+        If more than one strategy yields the highest payoff, imitation occurs to any of those strategies with equal probability.
+    Normalization:
+        Each row of the transition matrix is normalized so the matrix is stochastic (each row sums to 1). Absorbing states (where no player can improve their payoff by imitating) are handled by setting self-transition probability to 1.
 
 ################## For experiments, reference the specific function and script used to generate each figure in the report. ################
 

@@ -30,16 +30,19 @@ Assigns strategies to all players, then plays a match between every unique pair,
 
 3. GrPlot
 Purpose:
-Helper function for plotting the state transition graph with node coloring, based on loaded data.
+Plots the state transition graph using theoretical transition probabilities, coloring nodes according to state metrics.
 
 Usage:
 SC = GrPlot(fname)
 Where
-	fname: Filename of the .mat file containing necessary simulation data.
+	fname: String, the filename of a .mat file containing simulation data (including mc, PP, S, N, and L variables).
 
 Description:
-Loads state and payoff data from a file, processes node colors for the state graph, and plots it.
-Note: This function is primarily used internally for visualizing Markov chains or state transitions.
+    Loads simulation data from the file.
+    Constructs a directed graph from the transition matrix.
+    Computes and normalizes node colors.
+    Plots the state transition graph with nodes colored according to the normalized state vector.
+    Useful for visualizing the theoretical results of the evolutionary process.
 
 4. MatchPayoff
 Purpose:
@@ -57,3 +60,35 @@ Plays T rounds between the two strategies, maintaining and updating the history,
 
 Final Note:
 Users do not need to run these helper functions explicitly
+
+5. get_stationary_colors
+Purpose:
+Computes node colors based on the stationary distribution of a Markov transition matrix for visualization.
+
+Usage:
+    PP = get_stationary_colors(P, cmap_name)
+Where
+    P: Square Markov transition matrix.
+    cmap_name (optional): String, name of the MATLAB colormap (e.g., 'jet', 'parula'). Defaults to 'jet'.
+Outputs
+    PP: An array of RGB colors corresponding to each state, normalized by stationary probability.
+Description:
+    Finds the stationary distribution of P.
+    Normalizes it and maps each value to a color in the specified colormap.
+    Used for node coloring in Markov state transition plots.
+    
+6. enumerate_states
+Purpose:
+Enumerates all possible distributions of N players among M strategies.
+
+Usage:
+    states = enumerate_states(N, M)
+Where
+    N: Number of players.
+    M: Number of possible strategies.
+Outputs
+    states: An array where each row represents a possible allocation of players to strategies (summing to N).
+
+Description:
+    Recursively generates all possible combinations of players across strategies.
+    Used for theoretical analysis and Markov state enumeration.
