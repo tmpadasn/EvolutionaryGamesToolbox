@@ -12,6 +12,7 @@ After installing and setting the path, you can immediately run the example scrip
 	1. After installing and setting the path, you can immediately run the example scripts provided:
 	2. Run any script to reproduce a figure or experiment:
 		Go to the examples/ folder and run any script locally or in matlab online
+		Be careful: You may need to add this line of code: """ addpath('/path/to/Code'); """ line of code at the start of your script so the file has access to the functions that exist in the Code folder
 	3. Each example script is referenced in the report and will reproduce the corresponding experiment or figure.
 3. Report
 	1. The Report folder contains a comprehensive PDF report (report.pdf) with:
