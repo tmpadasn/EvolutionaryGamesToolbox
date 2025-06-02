@@ -26,7 +26,7 @@ After installing and setting the path, you can immediately run the example scrip
      ```
 
 2. Each example script is referenced in the report and will reproduce the corresponding experiment or figure.
-3. Note: If you run the scripts locally on your desktop, you may need to explicitly import some helper functions from matlab. If you run 
+3. Note: If you run the scripts locally on your desktop, you may need to explicitly import some helper functions from matlab. If you run it in Matlab online, there shouldn't be any problems.
 ---
 
 ## 3. Report
