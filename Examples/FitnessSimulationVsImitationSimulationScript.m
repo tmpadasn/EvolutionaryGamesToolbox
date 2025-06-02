@@ -18,8 +18,8 @@ subplot(1,2,2);
 plot(POP_the, 'LineWidth', 2); title('Imitation'); legend(Strategies); grid on;
 sgtitle('Figure 1 (PvP): per\_cd vs per\_ddc vs soft\_majo');
 
-save('my_mc_results.mat', 'mc', 'PP', 'S', 'N', 'L');
-GrPlot('my_mc_results.mat');
+% save('my_mc_results.mat', 'mc', 'PP', 'S', 'N', 'L');
+% GrPlot('my_mc_results.mat');
 
 %% Figure 2
 Strategies = {'gradual', 'tit_for_tat', 'per_cd'};
