@@ -49,3 +49,11 @@ After installing and setting the path, you can immediately run the example scrip
 - `Report/` – The project report in PDF and all LaTeX source files
 
 ---
+
+## 5. Personal Info (Group 4)
+
+- `ΜΠΙΝΟΣ ΓΕΩΡΓΙΟΣ` – ΑΕΜ: 9333 | email: gampinos@ece.auth.gr
+- `ΜΠΑΔΑΣ ΤΡΥΦΩΝ` – ΑΕΜ: 10680 | email: tmpadasn@ece.auth.gr
+- `ΧΑΤΖΗΛΥΡΑΣ ΓΙΩΡΓΟΣ` – ΑΕΜ: 10820 | email: cgiorgos@ece.auth.gr
+
+---
