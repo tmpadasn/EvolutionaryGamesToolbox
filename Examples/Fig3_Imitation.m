@@ -28,7 +28,7 @@ subplot(1,2,2)
 plot(POP_sim, 'LineWidth', 2); title('Simulation'); legend(Strategies); grid on;
 sgtitle('Figure 3 a = 3 (Initial Pop: [12, 6, 3]): per\_cd vs per\_ddc vs soft\_majo');
 
-%% Figure 1 a = 3.4
+%% Figure 3 a = 3.4
 T = 100;
 a = 3.4;
 B = [a 1;

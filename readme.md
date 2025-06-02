@@ -17,10 +17,7 @@ A MATLAB toolbox for simulating and analyzing evolutionary dynamics in the Itera
 ## 2. Quick Start
 
 After installing and setting the path, you can immediately run the example scripts provided:
-
-1. After installing and setting the path, you can immediately run the example scripts provided:
-
-2. Run any script to reproduce a figure or experiment:
+1. Run any script to reproduce a figure or experiment:
    - Go to the `Examples/` folder and run any script locally or in MATLAB Online
    - Be careful: You may need to add this line of code at the start of your script so the file has access to the functions that exist in the `Code` folder:
 
@@ -28,8 +25,8 @@ After installing and setting the path, you can immediately run the example scrip
      addpath('/path/to/Code');
      ```
 
-3. Each example script is referenced in the report and will reproduce the corresponding experiment or figure.
-
+2. Each example script is referenced in the report and will reproduce the corresponding experiment or figure.
+3. Note: If you run the scripts locally on your desktop, you may need to explicitly import some helper functions from matlab. If you run 
 ---
 
 ## 3. Report
